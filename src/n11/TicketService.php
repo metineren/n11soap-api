@@ -13,6 +13,17 @@ class TicketService extends SoapClient
 	 */
 	public function TicketListingBelongsToSeller(int $sellerId, int $first = null, int $pageSize = null)
 	{
+		$first = (int)$first;
+		$pageSize = (int)$pageSize;
+
+		if ($first > 0)
+			$first = $first -1;
+		if ($first < 0)
+			$first = 0;
+
+		if ($pageSize <= 0)
+			$pageSize = 30;
+
 		return parent::__call(__FUNCTION__, array(array('sellerId' => $sellerId, 'first' => $first, 'pageSize' => $pageSize)));
 	}
 
@@ -26,6 +37,17 @@ class TicketService extends SoapClient
 	 */
 	public function TicketListingAssignedToSeller(int $sellerId, int $first = null, int $pageSize = null)
 	{
+		$first = (int)$first;
+		$pageSize = (int)$pageSize;
+
+		if ($first > 0)
+			$first = $first -1;
+		if ($first < 0)
+			$first = 0;
+
+		if ($pageSize <= 0)
+			$pageSize = 30;
+
 		return parent::__call(__FUNCTION__, array(array('sellerId' => $sellerId, 'first' => $first, 'pageSize' => $pageSize)));
 	}
 

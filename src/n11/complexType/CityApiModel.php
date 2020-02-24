@@ -6,25 +6,13 @@ class CityApiModel extends ComplexType
 	/**
 	 * CityApiModel constructor.
 	 *
-	 * @param array $city
+	 * @param string $name
+	 * @param int $code
 	 *
 	 * @throws \ReflectionException
 	 */
-	public function __construct(array $city = array())
+	public function __construct(string $name, int $code)
 	{
-		parent::__construct($city);
-	}
-
-	/**
-	 * @param CityApiModel $city
-	 *
-	 * @return $this
-	 */
-	public function add(CityApiModel $city)
-	{
-		$cities = $this->offsetGet('city');
-		$cities[] = $city;
-		$this->offsetSet('city', $cities);
-		return $this;
+		parent::__construct($name, $code);
 	}
 }
