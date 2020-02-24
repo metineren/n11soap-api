@@ -1,0 +1,31 @@
+{
+    "name": "metineren/N11SoapAPI",
+    "description": "N11 Soap API",
+    "keywords": [
+        "n11",
+        "soap",
+        "api"
+    ],
+    "homepage": "https://github.com/metineren/N11SoapAPI",
+    "license": "GNU General Public License v3.0",
+    "authors": [
+        {
+            "name": "Metin EREN",
+            "email": "me@metineren.com",
+            "homepage": "https://metineren.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.0",
+        "ext-soap": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "metineren\\N11SoapAPI\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
