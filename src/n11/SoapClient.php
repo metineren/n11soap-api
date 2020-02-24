@@ -12,7 +12,7 @@ class SoapClient
 	/**
 	 * @var string $version
 	 */
-	public $version = '4.6';
+	public static $version = '4.6';
 
 	/**
 	 * @var object SoapClient instance $service
@@ -240,9 +240,9 @@ class SoapClient
 	/**
 	 * @return string
 	 */
-	public function getVersion()
+	public static function getVersion()
 	{
-		return $this->version;
+		return static::$version;
 	}
 
 	/**
