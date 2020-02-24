@@ -13,7 +13,7 @@ a maximum of interoperability.
 Install the latest version with
 
 ```bash
-$ composer require metineren/n11soap-api
+$ composer require metineren/n11soap-api:4.6
 ```
 
 #### Basic Usage
@@ -212,7 +212,7 @@ $exchangeInfo = 'exchangeInfo';
 $shippingInfo = 'shippingInfo';
 $specialDelivery = false;
 $deliveryFeeType = 'deliveryFeeType';
-$combinedShipmentAllowed = false,
+$combinedShipmentAllowed = false;
 $shipmentMethod = 'shipmentMethod';
 $cargoAccountNo = null;
 $useDmallCargo = false;
@@ -271,6 +271,6 @@ print_r($service->TicketReasons());
 var_dump($service->TicketRead(12345332, 12));
 print_r($service->TicketListingAssignedToSeller(12, 1, 30));
 var_dump($service->TicketAnswer(12, 1231231231231233123, 'ticket answer here'));
-var_dump($service->TicketCreate(143872, 12, 'Ticket title here', 'Ticket question here'))
+var_dump($service->TicketCreate(143872, 12, 'Ticket title here', 'Ticket question here'));
 
 ```

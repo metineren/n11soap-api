@@ -7,7 +7,7 @@
         "api"
     ],
     "homepage": "https://github.com/metineren/n11soap-api",
-    "license": "GNU General Public License v3.0",
+    "license": "MIT",
     "authors": [
         {
             "name": "Metin EREN",
