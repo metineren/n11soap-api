@@ -13,7 +13,7 @@ a maximum of interoperability.
 Install the latest version with
 
 ```bash
-$ composer require metineren/n11soap-api:4.6
+$ composer require metineren/n11soap-api
 ```
 
 #### Basic Usage
