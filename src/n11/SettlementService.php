@@ -17,10 +17,8 @@ class SettlementService extends SoapClient
 		$page = (int)$page;
 		$limit = (int)$limit;
 
-		if ($page > 0)
-			$page = $page -1;
-		if ($page < 0)
-			$page = 0;
+		if ($page <= 0)
+			$page = 1;
 
 		if ($limit <= 0)
 			$limit = 30;
@@ -41,10 +39,8 @@ class SettlementService extends SoapClient
 		$page = (int)$page;
 		$limit = (int)$limit;
 
-		if ($page > 0)
-			$page = $page -1;
-		if ($page < 0)
-			$page = 0;
+		if ($page <= 0)
+			$page = 1;
 
 		if ($limit <= 0)
 			$limit = 30;
