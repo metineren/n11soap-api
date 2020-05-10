@@ -1,5 +1,8 @@
+![Cover](https://github.com/metineren/n11soap-api/blob/master/docs/readme-cover.png?raw=true)
 # N11 Soap API - Soap Api implementation for php 
 
+[![License](https://img.shields.io/github/license/metineren/n11soap-api.svg)](https://github.com/metineren/n11soap-api/blob/master/LICENSE)
+[![Issues](https://img.shields.io/github/issues/metineren/n11soap-api.svg)](https://github.com/metineren/n11soap-api/issues)
 [![Total Downloads](https://img.shields.io/packagist/dt/metineren/n11soap-api.svg)](https://packagist.org/packages/metineren/n11soap-api)
 [![Latest Stable Version](https://img.shields.io/packagist/v/metineren/n11soap-api.svg)](https://packagist.org/packages/metineren/n11soap-api)
 
