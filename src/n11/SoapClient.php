@@ -6,13 +6,17 @@ use Exception;
 use SoapClient as SoapClientNative;
 use N11\complexType\Authentication;
 
+/** Disable Soap Cache for prevent some errors */
+@ini_set('soap.wsdl_cache_enabled', 0);
+@ini_set('soap.wsdl_cache', 0);
+@ini_set('soap.wsdl_cache_ttl', 0);
 
 class SoapClient
 {
 	/**
 	 * @var string $version
 	 */
-	public static $version = '4.6';
+	public static $version = '5.2';
 
 	/**
 	 * @var object SoapClient instance $service
@@ -51,7 +55,9 @@ class SoapClient
 		'SettlementService.wsdl',
 		'ShipmentCompanyService.wsdl',
 		'ShipmentService.wsdl',
-		'TicketService.wsdl'
+		'TicketService.wsdl',
+		'ClaimCancelService.wsdl',
+		'ReturnService.wsdl'
 	);
 
 	/**
@@ -66,7 +72,7 @@ class SoapClient
 	 * @param Authentication $authentication
 	 *
 	 * @return SoapClient
-	 * @throws \App\Services\N11\SoapClientException
+	 * @throws SoapClientException
 	 */
 	public static function getInstance(bool $debug, Authentication $authentication)
 	{
@@ -74,15 +80,12 @@ class SoapClient
 	}
 
 	/**
-	 * N11SoapClient constructor.
+	 * SoapClient constructor.
 	 *
 	 * @param bool $debug
-	 * @param string $app_key
-	 * @param string $app_secret
+	 * @param Authentication $authentication
 	 *
-	 * @throws | SoapFault
-	 *
-	 * if API KEY or API SECRET is not defined or if called N11 Soap Service Not Found triggers throws
+	 * @throws SoapClientException
 	 */
 	public function __construct(bool $debug, Authentication $authentication)
 	{
